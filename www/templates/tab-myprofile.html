@@ -1,0 +1,32 @@
+<ion-view view-title="My Profile" cache-view="false" >
+	<ion-nav-buttons side="right">
+      <button class="button button-icon icon ion-checkmark-round" ng-click="updateYourProfile()"> 
+      </button>
+      </ion-nav-buttons>
+   
+    
+  <ion-content class="padding">
+    
+    <form name="myProfileForm">
+        <div class="list">	
+            <label class="item item-input">
+                <span class="input-label">Username</span>
+                <input type="text" ng-model="profile.username" name="usernameTxt">
+            </label> 
+            
+           <label class="item item-input">
+                <span class="input-label">Email Address</span>
+                <input type="email" ng-model="profile.emailaddress" name="emailaddressTxt">
+            </label> 
+            
+            <label class="item item-input">
+                <span class="input-label">Age</span>
+                <input type="number" ng-model="profile.age" name="ageTxt">
+            </label> 
+            
+        </div>
+      </form>
+  
+    </ion-content>
+    
+</ion-view>

@@ -1,0 +1,42 @@
+<ion-view view-title="Activity Tracker" cache-view="false" >
+
+<ion-nav-buttons side="right">
+      <button class="button button-icon icon ion-ios-pulse-strong" ng-click="viewMyActivities()"> 
+      </button>  
+     </ion-nav-buttons>
+      
+  <ion-content class="padding">
+    
+    <form name="noSQLDemoForm">
+        <div class="list">	  
+             <label class="item item-input ">
+                <span class="input-label">You logged-in as</span>  
+                <span class="input-label">{{tracker.person}}</span>
+            </label>
+             <label class="item item-input item-select">
+                <span class="input-label">Activity</span>  
+                <select ng-model="tracker.activity">
+			      <option value="arrive.at.office">Arrive at office</option>
+			      <option value="check.reply.email">Check and reply email</option> 
+			      <option value="discussion.with.colleague">Discussion with colleague</option> 
+			      <option value="business.as.usual">Business as usual</option> 
+			      <option value="lunch.break">Lunch break</option>
+			      <option value="tea.break">Tea break</option>  
+			      <option value="toilet.break">Toilet break</option> 
+			      <option value="call.off.the.day">Call off the day</option> 
+			    </select>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Remarks</span>
+                <input type="text" ng-model="tracker.remarks">
+            </label> 
+            
+        </div>
+        <div class="list">
+          <button type="button" class="button button-block button-positive" ng-click="submitManualTracker()">Submit</button> 
+        </div>
+      </form>
+
+    </ion-content>
+    
+</ion-view>
